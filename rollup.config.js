@@ -6,8 +6,7 @@ import commonjs from 'rollup-plugin-commonjs';
 var pkg = JSON.parse(readFileSync('package.json', 'utf-8'));
 
 export default {
-  entry: pkg['jsnext:main'],
-  sourceMap: true,
+  input: pkg['jsnext:main'],
   plugins: [
     commonjs({
       include: 'node_modules/**'

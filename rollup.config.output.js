@@ -12,8 +12,19 @@ config.plugins.unshift(nodeResolve({
   extensions: ['.js']
 }));
 
-config.format = 'umd';
-config.dest = pkg.main;
-config.moduleName = 'accounting';
+config.output = [
+  {
+    format: 'umd',
+    sourcemap: true,
+    file: pkg.main,
+    name: 'accounting'
+  },
+  {
+    format: 'es',
+    sourcemap: true,
+    file: pkg.module,
+    name: 'accounting'
+  }
+];
 
 export default config;
