@@ -1,9 +1,3 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.accounting = {})));
-}(this, (function (exports) { 'use strict';
-
 /**
  * The library's settings configuration interface.
  *
@@ -497,16 +491,5 @@ function formatColumn(list) {
   });
 }
 
-exports.settings = settings;
-exports.unformat = unformat;
-exports.toFixed = toFixed;
-exports.formatMoney = formatMoney;
-exports.formatNumber = formatNumber;
-exports.formatColumn = formatColumn;
-exports.format = formatMoney;
-exports.parse = unformat;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
-//# sourceMappingURL=accounting.umd.js.map
+export { settings, unformat, toFixed, formatMoney, formatNumber, formatColumn, formatMoney as format, unformat as parse };
+//# sourceMappingURL=accounting.es.js.map
